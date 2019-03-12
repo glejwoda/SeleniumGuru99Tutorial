@@ -60,6 +60,7 @@ public class InternetDomowy20Mb {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", choose_equipment);
         Thread.sleep(500);
 
+
     choose_equipment.click();
 
  /*       Action mouseOverSubmit = actions
