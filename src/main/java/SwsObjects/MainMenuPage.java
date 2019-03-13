@@ -1,4 +1,4 @@
-package sws_objects;
+package SwsObjects;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;

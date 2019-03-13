@@ -2,15 +2,14 @@ package SWS_Test;
 
 import org.junit.Test;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import sws_objects.AddressDataGenerator;
-import sws_objects.OtherInfoDataGenerator;
-import sws_objects.MainMenuPage;
-import sws_objects.NameSurnameGenerator;
+import SwsObjects.AddressDataGenerator;
+import SwsObjects.OtherInfoDataGenerator;
+import SwsObjects.MainMenuPage;
+import SwsObjects.NameSurnameGenerator;
 
 
 public class NewAccount {

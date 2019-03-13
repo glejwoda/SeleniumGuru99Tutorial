@@ -1,4 +1,4 @@
-package sws_objects;
+package SwsObjects;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
