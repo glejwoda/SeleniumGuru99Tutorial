@@ -1,12 +1,16 @@
 package ATG_Test;
 
 import AtgObjects.HomeInternet20MbObjects;
+import WebDriverTutorialGuru99.JSErrorsLogging;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
@@ -22,8 +26,14 @@ public class HomeInternet20MbTest {
 
     @Before
     public void setUp() throws Exception {
-        driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, 10);
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--incognito");
+        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+
+        driver = new ChromeDriver(capabilities); //in cognito mode
+//        driver = new FirefoxDriver();
+        wait = new WebDriverWait(driver,10);
         actions = new Actions(driver);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
@@ -34,7 +44,12 @@ public class HomeInternet20MbTest {
         HomeInternet20MbObjects homeInternet20MbObjects;
         homeInternet20MbObjects = new HomeInternet20MbObjects(driver);
 
-        homeInternet20MbObjects.setAllElements();
+            homeInternet20MbObjects.setAllElements();
+
+        JSErrorsLogging jsErrorsLogging;
+        jsErrorsLogging = new JSErrorsLogging(driver);
+
+             jsErrorsLogging.ExtractJSLogs();
     }
 
 

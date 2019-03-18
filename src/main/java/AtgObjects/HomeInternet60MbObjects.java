@@ -42,9 +42,9 @@ public class HomeInternet60MbObjects {
         driver.findElement(By.id("select_tariprom_39703")).click();
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Opis urządzenia'])[1]/following::img[1]")).click();
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Zamawiam'])[1]/following::button[1]")).click();
-        driver.findElement(By.xpath("//button[@type='button'][contains(text(),'Dalej')]")).click();
+//        driver.findElement(By.xpath("//button[@type='button'][contains(text(),'Dalej')]")).click();
 
-        WebElement dalej_btn = driver.findElement(By.xpath("//*[@id=\"basket-summary-container\"]/div[2]/button"));
+        WebElement dalej_btn = driver.findElement(By.xpath("//button[@type='button'][contains(text(),'Dalej')]"));
 
 
         Action mouseOverSubmit = actions

@@ -1,12 +1,16 @@
 package ATG_Test;
 
 import AtgObjects.HomeInternet60MbObjects;
+import WebDriverTutorialGuru99.JSErrorsLogging;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.fail;
@@ -21,7 +25,13 @@ public class HomeInternet60MbTest {
 
     @Before
     public void setUp() throws Exception {
-        driver = new ChromeDriver();
+/*        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--incognito");
+        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+
+        driver = new ChromeDriver(capabilities); //in cognito mode*/
+        driver = new FirefoxDriver();
         wait = new WebDriverWait(driver,10);
         actions = new Actions(driver);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

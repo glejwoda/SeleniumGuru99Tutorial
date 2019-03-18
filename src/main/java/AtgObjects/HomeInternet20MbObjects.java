@@ -44,9 +44,8 @@ public class HomeInternet20MbObjects {
         driver.findElement(By.id("select_tariprom_39702")).click();
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Filtruj'])[2]/following::img[1]")).click();
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Zamawiam'])[1]/following::button[1]")).click();
-        driver.findElement(By.xpath("//button[@type='button'][contains(text(),'Dalej')]")).click();
-        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        WebElement dalej_btn = driver.findElement(By.xpath("//*[@id=\"basket-summary-container\"]/div[2]/button"));
+//        driver.findElement(By.xpath("//button[@type='button'][contains(text(),'Dalej')]")).click();
+        WebElement dalej_btn = driver.findElement(By.xpath("//button[@type='button'][contains(text(),'Dalej')]"));
 
         Action mouseOverSubmit = actions
                 .moveToElement(dalej_btn)
